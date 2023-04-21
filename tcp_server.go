@@ -12,7 +12,7 @@ func main() {
 
 	var wg sync.WaitGroup
 
-	server, err := net.Listen("tcp", "172.17.0.4:8040")
+	server, err := net.Listen("tcp", "172.17.0.3:8040")
 	if err != nil {
 		log.Fatal(err)
 	}
