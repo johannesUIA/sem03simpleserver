@@ -6,7 +6,7 @@ import (
 	"net"
 	"sync"
         "fmt"
-        "github.com/jhannesUIA/funtemps/conv"
+        "github.com/johannesUIA/funtemps/conv"
         "github.com/johannesUIA/is105sem03/mycrypt"
 
 
@@ -16,7 +16,7 @@ func main() {
 
 	var wg sync.WaitGroup
 
-	server, err := net.Listen("tcp", "172.17.0.2:8040")
+	server, err := net.Listen("tcp", "172.17.0.3:8040")
 	if err != nil {
 		log.Fatal(err)
 	}
@@ -54,8 +54,7 @@ func main() {
 						_, err = c.Write([]byte("pong"))
 					
 
-	case "Kjevik":
-
+	                                        case "Kjevik":
 						var celsius float64 = 6
 						fahrenheit := conv.CelsiusToFarhenheit(celsius)
 						response := fmt.Sprintf("Kjevik;SN39040;18.03.2022 01:50;%.2f", fahrenheit)
