@@ -4,3 +4,5 @@ github.com/johannesUIA/is105sem03 v0.0.0-20230421072521-6bcccb305600 h1:2gCsu2B0
 github.com/johannesUIA/is105sem03 v0.0.0-20230421072521-6bcccb305600/go.mod h1:UhqqtWAcFMqymDWcyDQ/leADZvUjsqfRyWOoIURHDO0=
 github.com/johannesUIA/is105sem03 v0.0.0-20230424080127-8eebc7e4fa49 h1:ZAjng7RhI0ogE1cAVNzU/gvWIxKN2YYUzW/tYK+6yMo=
 github.com/johannesUIA/is105sem03 v0.0.0-20230424080127-8eebc7e4fa49/go.mod h1:UhqqtWAcFMqymDWcyDQ/leADZvUjsqfRyWOoIURHDO0=
+github.com/johannesUIA/minyr v0.0.0-20230330144949-6313a8e1e58c h1:XzUT7CYoQRK93zHvv/ITCIs85502bqucK5OPXtdruLk=
+github.com/johannesUIA/minyr v0.0.0-20230330144949-6313a8e1e58c/go.mod h1:W4eowcI29ea+gaJrXd82/zrmzIeaQrcEWh8p1ETj+PM=
