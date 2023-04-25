@@ -7,6 +7,7 @@ import (
 	"sync"
 
 	"github.com/johannesUIA/is105sem03/mycrypt"
+	"github.com/johannesUIA/minyr/yr"
 )
 
 func main() {
