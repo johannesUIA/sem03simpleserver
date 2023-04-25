@@ -5,11 +5,8 @@ import (
 	"log"
 	"net"
 	"sync"
-        "fmt"
-        "github.com/johannesUIA/funtemps/conv"
-        "github.com/johannesUIA/is105sem03/mycrypt"
 
-
+	"github.com/johannesUIA/is105sem03/mycrypt"
 )
 
 func main() {
@@ -41,26 +38,17 @@ func main() {
 						}
 						return // fra for løkke
 					}
-					
-
-
-      dekryptertMelding := mycrypt.Krypter([]rune(string(buf[:n])), mycrypt.ALF_SEM03, len(mycrypt.ALF_SEM03)-4)
-                     log.Println("Dekrypter melding: ", string(dekryptertMelding))
-                                msg := string(dekryptertMelding)
-                                        switch msg {
-
-
-  				        case "ping":
+					dekryptertMelding := mycrypt.Krypter([]rune(string(buf[:n])), mycrypt.ALF_SEM03, (len(mycrypt.ALF_SEM03) - 4))
+					log.Println("Dekrypter melding: ", string(dekryptertMelding))
+					msg := string(dekryptertMelding)
+					switch msg {
+					case "ping":
 						_, err = c.Write([]byte("pong"))
-					
-
-	                                        case "Kjevik":
-						var celsius float64 = 6
-						fahrenheit := conv.CelsiusToFarhenheit(celsius)
-						response := fmt.Sprintf("Kjevik;SN39040;18.03.2022 01:50;%.2f", fahrenheit)
-						_, err = c.Write([]byte(response))
-
-default:
+					case "Kjevik;SN39040;18.03.2022 01:50;6":
+						newMsg := yr.ConvertCelsiusToFahr(msg)
+						krypterTilbake := mycrypt.Krypter([]rune((newMsg)), mycrypt.ALF_SEM03, 4)
+						_, err = c.Write([]byte(string(krypterTilbake)))
+					default:
 						_, err = c.Write(buf[:n])
 					}
 					if err != nil {
